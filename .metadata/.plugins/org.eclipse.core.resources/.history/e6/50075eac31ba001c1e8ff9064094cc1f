@@ -1,0 +1,27 @@
+package com.bit.db;
+
+class Lec03{
+	int su=12345;
+}
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+//		Lec03 obj=new Lec03();
+//		System.out.println(obj.su);
+		
+		try {
+			Class clz=Class.forName("com.bit.db.Lec03");
+			Lec03 obj=(Lec03) clz.newInstance();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.bit.db;
+
+import java.sql.*;
+
+public class Ex04 {
+	
+	public static void printList() {
+		Connection conn=null;
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		try {
+			conn=Ex02.getConnection();
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

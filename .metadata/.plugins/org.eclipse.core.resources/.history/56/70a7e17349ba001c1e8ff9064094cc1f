@@ -1,0 +1,9 @@
+package com.bit.vmdb;
+
+public class StudenScoreManage {
+
+	public static void main(String[] args) {
+		Connection conn=
+	}
+
+}

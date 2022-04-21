@@ -1,0 +1,16 @@
+package com.bit.db;
+
+import java.sql.SQLException;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		try {
+			new com.mysql.cj.jdbc.Driver();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

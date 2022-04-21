@@ -1,0 +1,32 @@
+package com.bit.web;
+
+import java.io.*;
+import java.net.*;
+
+public class Server02 extends Thread {
+	Socket sock;
+	
+	@Override
+	public void run() {
+		OutputStream os=null;
+	}
+
+	public static void main(String[] args) {
+		ServerSocket serv=null;
+		
+		try {
+			serv=new ServerSocket(8080);
+			
+			while(true) {
+				Socket sock=serv.accept();
+				Server02 me=new Server02();
+				me.sock=sock;
+				me.start();
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

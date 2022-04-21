@@ -1,0 +1,35 @@
+package com.bit.web;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.logging.Logger;
+
+public class Server01 {
+	static Logger log=Logger.getGlobal();
+	public static void main(String[] args) {
+		
+		ServerSocket serv=null;
+		Socket sock=null;
+		try {
+			serv=new ServerSocket(80);
+			serv.accept();
+			
+			log.info("접속이 들어왔습니다!");
+			
+			
+			sock.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if(serv!=null)serv.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

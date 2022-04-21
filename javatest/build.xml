@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run" name="ANT TEST PROJECT">
+	<target name="run" depends="compile">
+		<java classname="com.bit.javatest.StudentScore04">
+			<classpath path="compileFile" />
+		</java>
+	</target>
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="./src" destdir="compileFile" />
+	</target>
+</project>

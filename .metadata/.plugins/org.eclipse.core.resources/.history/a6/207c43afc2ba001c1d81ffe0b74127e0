@@ -1,0 +1,50 @@
+package com.bit.web;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Server01 {
+	static Logger log=Logger.getGlobal();
+	
+	public static void main(String[] args) {
+		log.setLevel(Level.INFO);
+		ServerSocket serv=null;
+		Socket sock=null;
+		OutputStream os=null;
+		PrintStream ps=null;
+		try {
+			serv=new ServerSocket(80);
+			sock=serv.accept();
+			InetAddress addr=sock.getInetAddress();
+			log.info(addr.getHostAddress()+"님 접속이 들어왔습니다!");
+			
+			os=sock.getOutputStream();
+			ps=new PrintStream(os);
+			
+			ps.println("문서의 정보");
+			ps.println(); // 문서의 정보와 문서의 내용을 구분하는 요소는 개행
+			ps.println("document content...");
+			
+			ps.close();
+			os.close();
+			sock.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if(serv!=null)serv.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+}

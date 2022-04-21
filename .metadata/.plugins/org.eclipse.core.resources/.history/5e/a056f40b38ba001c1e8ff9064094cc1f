@@ -1,0 +1,17 @@
+package com.bit.db;
+
+import java.sql.*;
+
+public class Ex04 {
+	
+	public static void printList() {
+		Connection conn=null;
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

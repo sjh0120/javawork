@@ -1,0 +1,14 @@
+package com.bit.db;
+
+class Lec03{
+	int su=12345;
+}
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

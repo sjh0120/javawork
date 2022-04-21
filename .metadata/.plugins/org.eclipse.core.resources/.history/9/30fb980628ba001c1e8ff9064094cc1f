@@ -1,0 +1,21 @@
+package com.bit.db;
+
+import java.sql.SQLException;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		try {
+			Driver driver = new com.mysql.cj.jdbc.Driver();
+			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}
